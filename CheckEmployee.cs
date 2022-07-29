@@ -26,6 +26,8 @@ namespace EmployeeWage
             int empWage = 0;
             int totalEmpWage = 0;
 
+            for(int day=0; day<NUM_OF_WORKING_DAYS; day++)
+            {
                     Random random = new Random();
                     int empCheck = random.Next(3);
 
@@ -44,7 +46,8 @@ namespace EmployeeWage
                 empWage = empHr * WAGE_PER_HOUR;
                 totalEmpWage += empWage;
                 Console.WriteLine("Employee wage is: " + empWage);
-           
+            }           
+            Console.WriteLine("Employee wage is: " +totalEmpWage);
         }
     }
 }
